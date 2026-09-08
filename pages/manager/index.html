@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>拉菲表情包管理</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>拉菲表情包 · P1</h1>
+      <p class="muted">标签 / 触发词 / 上传 / 冷却与限额</p>
+    </header>
+
+    <section class="card" id="settings">
+      <h2>全局设置</h2>
+      <div class="grid">
+        <label>启用 <input type="checkbox" id="enabled" /></label>
+        <label>冷却(分) <input type="number" id="cooldown_minutes" min="0" /></label>
+        <label>每日上限 <input type="number" id="daily_cap" min="0" /></label>
+        <label>免打扰起 <input type="number" id="quiet_start_hour" min="0" max="23" /></label>
+        <label>免打扰止 <input type="number" id="quiet_end_hour" min="0" max="23" /></label>
+        <label>每回复最多 <input type="number" id="max_per_reply" min="1" max="3" /></label>
+      </div>
+      <label class="full">表情根目录 <input type="text" id="stickers_root" /></label>
+      <div class="row">
+        <button id="saveSettings">保存设置</button>
+        <span id="dailyStat" class="muted"></span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>标签</h2>
+      <div class="row">
+        <input id="newTag" placeholder="新标签名 e.g. zzz" />
+        <input id="newTriggers" placeholder="触发词，逗号分隔" class="grow" />
+        <button id="upsertTag">添加/更新</button>
+      </div>
+      <div id="tagList"></div>
+    </section>
+
+    <section class="card">
+      <h2>图片 · <span id="currentTagLabel">未选择</span></h2>
+      <div class="row">
+        <input type="file" id="fileInput" accept="image/*" />
+        <button id="uploadBtn" disabled>上传到当前标签</button>
+        <button id="refreshBtn">刷新</button>
+      </div>
+      <div id="gallery" class="gallery"></div>
+    </section>
+
+    <pre id="log" class="log"></pre>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

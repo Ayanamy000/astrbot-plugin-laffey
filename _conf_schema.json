@@ -1,0 +1,60 @@
+{
+  "enabled": {
+    "description": "启用表情包插件",
+    "type": "bool",
+    "default": true,
+    "hint": "关闭后不再附加表情"
+  },
+  "stickers_root": {
+    "description": "表情根目录（容器内路径）",
+    "type": "string",
+    "default": "/AstrBot/data/laffey_stickers",
+    "hint": "宿主机对应 /opt/astrbot/data/laffey_stickers"
+  },
+  "cooldown_minutes": {
+    "description": "同标签冷却（分钟）",
+    "type": "int",
+    "default": 10
+  },
+  "daily_cap": {
+    "description": "每日最多发送表情次数（全局）",
+    "type": "int",
+    "default": 10
+  },
+  "quiet_start_hour": {
+    "description": "免打扰开始小时(含)",
+    "type": "int",
+    "default": 0
+  },
+  "quiet_end_hour": {
+    "description": "免打扰结束小时(不含)",
+    "type": "int",
+    "default": 8
+  },
+  "max_per_reply": {
+    "description": "每条回复最多附加表情数",
+    "type": "int",
+    "default": 1
+  },
+  "attach_on_llm_reply_only": {
+    "description": "仅在即将发送回复时附加表情",
+    "type": "bool",
+    "default": true,
+    "hint": "true=装饰 LLM/消息结果；false=也可对独立表情事件发送"
+  },
+  "tags": {
+    "description": "标签 → 触发关键词列表（可在 WebUI 管理，也可用此配置）",
+    "type": "object",
+    "default": {
+      "zzz": ["困", "睡觉", "晚安", "Zzz", "zzz", "想睡"],
+      "juice": ["果汁", "氧气可乐", "喝", "好喝"],
+      "rabbit": ["兔子", "兔兔", "兔"],
+      "blush": ["害羞", "脸红", "不好意思"],
+      "poke": ["戳", "捅", "poke"],
+      "wave": ["你好", "嗨", "hi", "hello", "再见", "拜拜"],
+      "ok": ["好的", "可以", "嗯嗯", "OK", "ok", "行"],
+      "nope": ["不要", "不行", "拒绝", "no", "Nope"],
+      "idle": ["在吗", "干嘛", "摸鱼", "发呆"]
+    }
+  }
+}
