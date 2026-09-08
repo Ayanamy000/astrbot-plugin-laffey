@@ -39,8 +39,7 @@ Docker 常见映射：宿主机 `/opt/astrbot/data/laffey_stickers` ↔ 容器 `
 ### 方式 A：拷贝到 data/plugins
 
 ```bash
-# 克隆（仓库 URL 由维护者提供后替换）
-git clone <REPO_URL> laffey_stickers
+git clone https://github.com/Ayanamy000/astrbot-plugin-laffey.git laffey_stickers
 
 # 拷到 AstrBot 插件目录（Docker 示例）
 sudo cp -a laffey_stickers /opt/astrbot/data/plugins/
