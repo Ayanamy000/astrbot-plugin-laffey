@@ -1,0 +1,8 @@
+name: laffey_affection
+display_name: 拉菲好感
+desc: Laffey affection scores, commander UID gate, and short tone guidance for LLM
+short_desc: 指挥官 UID / 好感档位 / 口吻注入
+version: 0.1.0
+author: Ayanamy000
+repo: https://github.com/Ayanamy000/astrbot-plugin-laffey
+astrbot_version: '>=4.0.0'

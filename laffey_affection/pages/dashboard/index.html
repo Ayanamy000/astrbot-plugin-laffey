@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>拉菲好感</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>拉菲好感 · P2</h1>
+      <p class="muted">指挥官 UID · 好感分 · 档位口吻</p>
+    </header>
+
+    <section class="card" id="settings">
+      <h2>设置</h2>
+      <div class="grid">
+        <label>启用 <input type="checkbox" id="enabled" /></label>
+        <label>注入口吻 <input type="checkbox" id="inject_prompt" /></label>
+        <label>@加分 <input type="number" id="gain_at" min="0" /></label>
+        <label>关心加分 <input type="number" id="gain_care" min="0" /></label>
+        <label>果汁加分 <input type="number" id="gain_juice" min="0" /></label>
+        <label>刷屏扣分 <input type="number" id="spam_penalty" min="0" /></label>
+        <label>刷屏窗口(秒) <input type="number" id="spam_window_seconds" min="1" /></label>
+        <label>刷屏条数 <input type="number" id="spam_threshold" min="2" /></label>
+        <label>加分冷却(秒) <input type="number" id="gain_cooldown_seconds" min="0" /></label>
+        <label>默认分 <input type="number" id="default_score" min="0" /></label>
+        <label>上限 <input type="number" id="max_score" min="80" /></label>
+      </div>
+      <label class="full">指挥官 UID（逗号分隔，至少一个才可升到喜欢/爱/誓约）
+        <input type="text" id="commander_uids" placeholder="例如 123456789" />
+      </label>
+      <label class="full">白名单 UID（可选，留空不限制）
+        <input type="text" id="allow_list_uids" placeholder="留空=全员" />
+      </label>
+      <label class="full">数据目录 <input type="text" id="data_dir" /></label>
+      <div class="row">
+        <button id="saveSettings">保存设置</button>
+        <button id="refreshBtn" class="secondary">刷新</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>档位说明</h2>
+      <div id="levels" class="levels"></div>
+      <p class="muted">非指挥官封顶「友好」；未配置指挥官 UID 时所有人仅陌生～友好。</p>
+    </section>
+
+    <section class="card">
+      <h2>好感分</h2>
+      <div class="row">
+        <input id="setUid" placeholder="UID" />
+        <input id="setScore" type="number" placeholder="分数" />
+        <button id="setScoreBtn">设置/覆盖</button>
+      </div>
+      <div id="scoreTable"></div>
+    </section>
+
+    <pre id="log" class="log"></pre>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

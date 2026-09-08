@@ -1,0 +1,82 @@
+{
+  "enabled": {
+    "description": "启用好感插件",
+    "type": "bool",
+    "default": true,
+    "hint": "关闭后不改分、不注入口吻"
+  },
+  "commander_uids": {
+    "description": "指挥官 UID（仅插件设置/WebUI 填写，勿写死代码）",
+    "type": "list",
+    "default": [],
+    "hint": "留空=全员仅陌生～友好；填写后仅列表内 UID 可升喜欢/爱/誓约。支持多个。"
+  },
+  "allow_list_uids": {
+    "description": "可选白名单 UID（非空时仅名单内用户参与好感）",
+    "type": "list",
+    "default": [],
+    "hint": "留空=不限制；非空=仅名单内计分/注入"
+  },
+  "data_dir": {
+    "description": "好感数据目录（容器内路径）",
+    "type": "string",
+    "default": "/AstrBot/data/laffey_affection",
+    "hint": "宿主机常见 /opt/astrbot/data/laffey_affection；内含 scores.json"
+  },
+  "gain_at": {
+    "description": "@ / 点名拉菲 加分",
+    "type": "int",
+    "default": 2
+  },
+  "gain_care": {
+    "description": "关心类关键词加分",
+    "type": "int",
+    "default": 3
+  },
+  "gain_juice": {
+    "description": "果汁/氧气可乐玩笑加分",
+    "type": "int",
+    "default": 2
+  },
+  "spam_penalty": {
+    "description": "短时刷屏扣分",
+    "type": "int",
+    "default": 5
+  },
+  "spam_window_seconds": {
+    "description": "刷屏检测窗口（秒）",
+    "type": "int",
+    "default": 8
+  },
+  "spam_threshold": {
+    "description": "窗口内消息条数达到则判定刷屏",
+    "type": "int",
+    "default": 4
+  },
+  "gain_cooldown_seconds": {
+    "description": "正向加分冷却（秒，防刷分）",
+    "type": "int",
+    "default": 30
+  },
+  "inject_prompt": {
+    "description": "向 LLM 注入档位口吻提示",
+    "type": "bool",
+    "default": true
+  },
+  "default_score": {
+    "description": "新用户初始好感分",
+    "type": "int",
+    "default": 45,
+    "hint": "默认落在「陌生」档"
+  },
+  "max_score": {
+    "description": "好感分上限",
+    "type": "int",
+    "default": 200
+  },
+  "min_score": {
+    "description": "好感分下限",
+    "type": "int",
+    "default": 0
+  }
+}

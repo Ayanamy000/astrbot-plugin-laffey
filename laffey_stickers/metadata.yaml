@@ -3,6 +3,6 @@ display_name: 拉菲表情包
 desc: Laffey sticker tags — keyword match, cooldown/daily cap/quiet hours, WebUI upload
 short_desc: 拉菲表情包标签与 WebUI 管理
 version: 0.1.0
-author: project-dev
-repo: ''
+author: Ayanamy000
+repo: https://github.com/Ayanamy000/astrbot-plugin-laffey
 astrbot_version: '>=4.0.0'
